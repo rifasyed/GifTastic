@@ -1,7 +1,9 @@
 body {
-    background-image: url("../images/comicbookBg.jpg");
+    background: url("../images/comicbookBg.jpg") fixed no-repeat;
+
     width: 100%;
-    background-size: cover;
+    background-position: center;
+    background-size: 100%;
 }
 
 .jumbotron {
@@ -16,11 +18,15 @@ body {
 #heroBtns {
     color: red;
     text-align: center;
+    font-family: 'Comfortaa', cursive;
+
 }
 .superBTN {
     margin: 1%;
 }
 
 #hero-form {
-    text-align: center;
+    /* text-align: center; */
+    font-family: 'Comfortaa', cursive;
+
 }

@@ -43,7 +43,7 @@ $(document).ready(function () {
                 var heroDiv = $("<div class= col-md-4 heroImage>");
                 var results = response.data;
 
-                for (var i = 0; i < results.length; i = i + 3) {
+                for (var i = 0; i < results.length; i++) {
                     var stillGif = response.data[i].images.fixed_width_still.url;
                     var playGif = response.data[i].images.fixed_width.url;
                     var rating = response.data[i].rating;				
