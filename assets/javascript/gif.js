@@ -34,13 +34,13 @@ $(document).ready(function () {
             var superheroChoices = $(this).attr('data-name');
 
             // var apikey = "&api_key=AKnbLrKSn42S9vkarKPL1lclGUpv5LQE"
-            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + superheroChoices + "&api_key=AKnbLrKSn42S9vkarKPL1lclGUpv5LQE&limit=9"
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + superheroChoices + "&api_key=AKnbLrKSn42S9vkarKPL1lclGUpv5LQE&limit=8"
             
             $.ajax({
                 url: queryURL,
                 method: 'GET'
             }).then(function (response) {
-                var heroDiv = $("<div class= col-md-4 heroImage>");
+                var heroDiv = $("<div class= row heroImage><br><br>");
                 var results = response.data;
 
                 for (var i = 0; i < results.length; i++) {
@@ -56,29 +56,6 @@ $(document).ready(function () {
                     image.addClass("playChosenGif");
                     heroDiv.append(ratingDisplay);
                 
-                    // var stillGif = response.data[i + 1].images.fixed_width_still.url;
-                    // var playGif = response.data[i + 1].images.fixed_width.url;
-                    // var rating = response.data[i + 1].rating;				
-                    // var ratingDisplay = $('<p>').text( "Rating: " + rating.toUpperCase());
-                    // var image = $("<img>").attr("src", stillGif);
-                    // image.attr("playsrc", playGif);
-                    // image.attr("stopsrc", stillGif); 
-                    // heroDiv.append(image);
-                    // $('#heroGifs').append(heroDiv);
-                    // image.addClass("playChosenGif");
-                    // heroDiv.append(ratingDisplay);
-                
-                    // var stillGif = response.data[i + 2].images.fixed_width_still.url;
-                    // var playGif = response.data[i + 2].images.fixed_width.url;
-                    // var rating = response.data[i + 2].rating;				
-                    // var ratingDisplay = $('<p>').text( "Rating: " + rating.toUpperCase());
-                    // var image = $("<img>").attr("src", stillGif);
-                    // image.attr("playsrc", playGif);
-                    // image.attr("stopsrc", stillGif); 
-                    // heroDiv.append(image);
-                    // $('#heroGifs').append(heroDiv);
-                    // image.addClass("playChosenGif");
-                    // heroDiv.append(ratingDisplay);
                 
         }
     });
