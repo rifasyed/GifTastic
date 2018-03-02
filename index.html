@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Favorite Hereos</title>
-  <style type="text/css">
-    button,
-    div,
-    form,
-    input {
-      margin: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plaster" >
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,21 +16,21 @@
             <h1 class="display-3">Choose Your Hero</h1>
             <div id="heroBtns"></div>
             <form id="hero-form">
-                <label for="hero-input">Add your favorite superhero</label>
+                <label for="hero-input">Super Generator:</label>
                 <input type="text" id="hero-input">
-                <br>
                 
                 <!-- Button triggers new movie to be added -->
                 <input id="add-hero" type="submit" value="Initiate">
             </form>
             <hr class="my-4">
             
-            <div id="heroGifs"></div>
             <!-- <p class="lead">
                 <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
             </p> -->
         </div>
-
+        <div class="row">
+            <div id="heroGifs" class="col-md-12"></div>
+        </div>
     <!-- <h1>Pick Your Superhero</h1> -->
 
     <!-- Movies will get dumped here -->
