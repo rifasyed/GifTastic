@@ -18,12 +18,18 @@ $(document).ready(function () {
         if (heroInput != ""){
             superheroes.push(heroInput)
             
-            renderButtons()
+            // renderButtons()
+
+            var myBTN = $("<button class='superBTN' data-name=' " + heroInput + "'>" + heroInput + "</button>")
+            $("#heroBtns").append(myBTN)
 				
         } 
         else {
-				$('#hero-input').attr("placeholder", "Enter your favorite superhero to see some gifs")
-				renderButtons();
+                $('#hero-input').attr("placeholder", "Enter your favorite superhero to see some gifs")
+                
+                var myBTN = $("<button class='superBTN' data-name=' " + heroInput + "'>"+heroInput+"</button>")
+                $("#heroBtns").append(myBTN)
+				// renderButtons();
 			}
 			return false;
     })
@@ -56,6 +62,7 @@ $(document).ready(function () {
                     image.addClass("playChosenGif");
                     heroDiv.append(ratingDisplay);
                 
+
                 
         }
     });
