@@ -40,7 +40,7 @@ $(document).ready(function () {
                 url: queryURL,
                 method: 'GET'
             }).then(function (response) {
-                var heroDiv = $("<div class=heroImage>");
+                var heroDiv = $("<div class= col-md-4 heroImage>");
                 var results = response.data;
 
                 for (var i = 0; i < results.length; i = i + 3) {
